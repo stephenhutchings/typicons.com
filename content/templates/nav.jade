@@ -1,0 +1,19 @@
+- var classname = locals.page._metadata.title;
+- classname = classname ? classname.toLowerCase().split(' ').join('-') : '';
+
+nav#nav.clearfix(class='#{classname}')
+  a#change-style
+    i.typcn.typcn-adjust-contrast
+    | Line/Solid Style
+  a.making-link(href='/more/making-typicons/')
+    i.typcn.typcn-edit
+    | Making Typicons
+  a.how-to-link(href='/more/how-to-use-typicons/')
+    i.typcn.typcn-directions
+    | How to use Typicons
+  a.resources-link(href='/more/resources/') 
+    i.typcn.typcn-compass
+    | Resources
+  a.github-link 
+    i.typcn.typcn-directions
+    | Typicons on GitHub
