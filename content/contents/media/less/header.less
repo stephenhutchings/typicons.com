@@ -16,11 +16,32 @@
 }
 
 .sub {
-  // color: #fff;
-  // display: block;
-  // font-size: 12px;
   margin-left: 8px;
-  // margin-bottom: 32px;
+  color: @gray;
+  position: absolute;
+  font-size: 11px;
+  z-index: 1;
+  margin-left: 16px;
+  margin-top: 1px;
+
+  &:before {
+    content: '\e0f3';
+    color: #fff;
+    z-index: -1;
+    font-family: 'typicons';
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    font-size: 48px;
+    margin-left: -13px;
+    margin-top: 1px;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
 }
 
 .btn .typcn {

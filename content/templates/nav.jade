@@ -2,8 +2,8 @@
 - classname = classname ? classname.toLowerCase().split(' ').join('-') : '';
 
 nav#nav.clearfix(class='#{classname}')
-  a#change-style
-    i.typcn.typcn-adjust-contrast
+  //- a#change-style
+  //-   i.typcn.typcn-adjust-contrast
     | Line/Solid Style
   a.making-link(href='/more/making-typicons/')
     i.typcn.typcn-edit
@@ -14,6 +14,6 @@ nav#nav.clearfix(class='#{classname}')
   a.resources-link(href='/more/resources/') 
     i.typcn.typcn-compass
     | Resources
-  a.github-link 
-    i.typcn.typcn-directions
+  a.github-link(href='https://github.com/stephenhutchings/typicons.font') 
+    i.typcn.typcn-social-github
     | Typicons on GitHub

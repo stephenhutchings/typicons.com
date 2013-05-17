@@ -12,21 +12,55 @@ _gaq.push(['_trackPageview']);
 })();
 
 $(document).ready(function () {
+  var initialText = $('#result').text(),
+      counter = 0,
+      isTouch = 'ontouchstart' in window,
+      startEvent = isTouch ? 'touchstart' : 'mouseover';
+
   // Hide chrome on iOS
   setTimeout(function () {
     window.scrollTo(0, 1);
   }, 0);
 
-  var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'()*+,-./",
-    counter = 0,
-    isTouch = 'ontouchstart' in window,
-    startEvent = isTouch ? 'touchstart' : 'mouseover';
+  $('#search').on('keyup focus blur', function(e){
+    var query = $(this).val().trim().replace(/\-/gi, ' ').toLowerCase(),
+        matches = [],
+        result = initialText,
+        qnt = 4;
 
-  setInterval(function changeHeaderIcon() {
-    if (counter >= chars.length) counter = 0;
-    $('#icon-changer').text(chars.charAt(counter));
-    counter++;
-  }, 400);
+    $('.match').removeClass('match');
+
+    if (query) {
+      // Determine matches
+      $('.icon').each(function(i, el) {
+        $el = $(el);
+        try {
+          if ($el.data('match').match(query)) {
+            $el.addClass('match');
+            matches.push($el.data('name'));
+          }
+        } catch (e) {
+          // Suppress RegExp errors
+        }
+      })
+
+      // Interpolate result message
+      if (matches.length > qnt) {
+        var rem = matches.length - qnt,
+            plural = rem > 1;
+
+        result = matches.slice(0, qnt).join(', ') + ' and ' +
+                 rem + ' other' + (plural ? 's' : '');
+      } else if (matches.length > 0) {
+        result = matches.join(', ');
+      } else {
+        result = 'No results found for "' + query + '". Try "media", "weather" or "arrow".';
+      }
+    }
+
+    $('#preview').toggleClass('focus', query);
+    $('#result').html(result)
+  })
 
   $('#preview').on(startEvent, function(e) {
     var el = $(e.target).parent('.icon');
@@ -35,10 +69,10 @@ $(document).ready(function () {
     el.addClass('enlarge');
   });
 
-  $('#change-style').on('click', function(e) {
-    $('#preview').toggleClass('black');
-    if (window.location.pathname != '/') window.location.href = '/';
-  })
+  // $('#change-style').on('click', function(e) {
+  //   $('#preview').toggleClass('black');
+  //   if (window.location.pathname != '/') window.location.href = '/';
+  // })
 
   if (isTouch) {
     $('#preview aside').text('Tap on an icon to enlarge');

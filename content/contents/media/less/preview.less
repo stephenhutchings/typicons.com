@@ -1,91 +1,98 @@
 /* Preview */
 #preview {
   padding: 1em 0;
-  margin-left: -1em;
-}
-
-.icon {
-  float: left;
-  margin-left: 0.5em;
-  margin-bottom: 0.5em;
-  font-size: 24px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  background: #fff;
-  margin-right: -2px;
-
-  -webkit-transition: -webkit-transform 300ms;
-  -moz-transition: -moz-transform 300ms;
-  -o-transition: -o-transform 300ms;
-  -ms-transition: -ms-transform 300ms;
-  transition: transform 300ms;
-}
-
-.icon i {
-  display: block;
-}
-
-.switch {
-  position: absolute;
-  right: 0;
-  bottom: 10px;
-  color: #888;
-}
-.switch input {
-  margin-right: 0.3em;
-}
-.codesOn .i-name {
-  display: none;
-}
-.codesOn .i-code {
-  display: inline;
-}
-.i-code,
-.i-name {
-  display: none;
-}
-
-#preview .enlarge {
-  -webkit-transform: scale(4);
-  -moz-transform: scale(4);
-  -o-transform: scale(4);
-  -ms-transform: scale(4);
-  transform: scale(4);
-  z-index: 1;
-  position: relative;
-  border-color: #ccc;
-  // background-color: #ccc;
-
+  background: url('grid.png');
   background-size: 1px 1px;
-  background-image: url('grid.png');
-}
 
-#preview li.typicn.enlarge:after {
-  font-size: 5.5px;
-  content: attr(data-title);
-  display: block;
-  text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 34px;
-  height: 18px;
-  line-height: 1em;
-  border-radius: 4px;
-  font-family: "Questrial", sans-serif;
-  
-  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 40%, rgba(255,255,255,0) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
-  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 40%,rgba(255,255,255,0) 100%);
-  background: -o-linear-gradient(top,  rgba(255,255,255,1) 40%,rgba(255,255,255,0) 100%);
-  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 40%,rgba(255,255,255,0) 100%);
-  background: linear-gradient(top,  rgba(255,255,255,1) 40%,rgba(255,255,255,0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
-}
+  &.focus .icon {
+    color: #eee;
+  }
 
-#preview aside {
-  text-align: center;
-  font-size: 10px;
-  padding-top: 16px;
-  clear: both;
+  .icon {
+    float: left;
+    padding: 0.25em;
+    padding: 2px;
+    font-size: 24px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.95);
+
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -o-transition: all 300ms;
+    -ms-transition: all 300ms;
+    transition: all 300ms;
+
+    &.match {
+      color: #000;
+    }
+
+    .typcn {
+      display: block;
+    }
+  }
+
+  .switch {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    color: #888;
+  }
+  .switch input {
+    margin-right: 0.3em;
+  }
+  .codesOn .i-name {
+    display: none;
+  }
+  .codesOn .i-code {
+    display: inline;
+  }
+  .i-code,
+  .i-name {
+    display: none;
+  }
+
+  .enlarge {
+    -webkit-transform: scale(4);
+    -moz-transform: scale(4);
+    -o-transform: scale(4);
+    -ms-transform: scale(4);
+    transform: scale(4);
+    z-index: 1;
+    position: relative;
+    border-color: #ccc;
+    background-size: 1px 1px;
+    background-image: url('grid.png');
+  }
+
+  .icon.enlarge:before,
+  .icon.enlarge:after {
+    font-size: 4px;
+    display: block;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 8px;
+    line-height: 1em;
+  }
+
+  .icon.enlarge:before {
+    font-size: 4px;
+    content: attr(data-name);
+    top: 2px;
+  }
+
+  .icon.enlarge:after {
+    font-size: 3px;
+    content: attr(data-code);
+    bottom: -3px;
+  }
+
+  aside {
+    text-align: center;
+    font-size: 10px;
+    padding-top: 16px;
+    clear: both;
+  }
 }
