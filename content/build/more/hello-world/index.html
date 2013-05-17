@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/icon">
+    <title>
+      Hello World - 
+      Hello World - 
+      Hello World - 
+      Hello World - Typicons
+    </title>
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="308 pixel perfect, all-purpose icons in two styles">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Questrial">
+    <link rel="stylesheet" href="/media/css/style.css">
+    <link rel="stylesheet" href="/media/css/github.css">
+    <link rel="stylesheet" href="/media/css/typicons.css">
+    <script src="/media/js/zepto.min.js"></script>
+    <script src="/media/js/script.js"></script>
+  </head>
+  <body>  
+    <header id="header"><a href="/">
+        <h1>Typicons<small class="sub">v2.0</small>
+        </h1>
+        <p class="desc">308 pixel perfect, all-purpose icons in two styles</p></a><a id="download" href="src/typicons_kit.zip" class="btn"><span class="typcn typcn-download"></span>Download</a>
+    </header>
+    <div id="content">
+      <div id="content-inner">
+        <nav id="nav" class="clearfix hello-world"><a href="/more/making-typicons/" class="making-link"><i class="typcn typcn-edit"></i>Making Typicons</a><a href="/more/how-to-use-typicons/" class="how-to-link"><i class="typcn typcn-directions"></i>How to use Typicons</a><a href="/more/resources/" class="resources-link"> <i class="typcn typcn-compass"></i>Resources</a><a href="https://github.com/stephenhutchings/typicons.font" class="github-link"> <i class="typcn typcn-social-github"></i>Typicons on GitHub</a>
+        </nav>
+        <h1>Hello World</h1>
+        <article class="post">
+          <section class="content"><p>Welcome to your new wintersmith site mortal.</p>
+<p>This is an example of how you can set up a blog with RSS, and an archive using Wintersmith.
+If you want a bare bones example check out the site in <code>examples/basic/</code> in the repository root or
+use <code>wintersmith new &lt;path&gt; --template basic</code> when creating a new site.</p>
+<p>Site structure:</p>
+<pre><code>├── config<span class="preprocessor">.json</span>                          site configuration <span class="keyword">and</span> metadata
+├── contents
+│   ├── archive<span class="preprocessor">.md</span>
+│   ├── articles                         each article is a subfolder of articles
+│   │   ├── another-test
+│   │   │   └── index<span class="preprocessor">.md</span>
+│   │   ├── bamboo-cutter
+│   │   │   ├── Taketori_Monogatari<span class="preprocessor">.jpg</span>
+│   │   │   └── index<span class="preprocessor">.md</span>
+│   │   ├── hello-world
+│   │   │   └── index<span class="preprocessor">.md</span>
+│   │   └── red-herring
+│   │       ├── banana<span class="preprocessor">.jpg</span>
+│   │       └── index<span class="preprocessor">.md</span>
+│   ├── authors                          if an author is <span class="keyword">set</span> <span class="keyword">in</span> an articles metadata it
+│   │   ├── baker<span class="preprocessor">.json</span>                   will be read from here
+│   │   └── the-wintersmith<span class="preprocessor">.json</span>
+│   ├── css
+│   │   ├── github<span class="preprocessor">.css</span>
+│   │   └── main<span class="preprocessor">.css</span>
+│   ├── feed<span class="preprocessor">.json</span>                        json page that renders the rss feed to feed<span class="preprocessor">.xml</span>
+│   ├── index<span class="preprocessor">.json</span>
+└── templates
+    ├── archive<span class="preprocessor">.jade</span>
+    ├── article<span class="preprocessor">.jade</span>
+    ├── author<span class="preprocessor">.jade</span>
+    ├── feed<span class="preprocessor">.jade</span>
+    ├── index<span class="preprocessor">.jade</span>
+    └── layout<span class="preprocessor">.jade</span></code></pre>
+<p>Articles are sorted by date and the 3 most recent are shown (configurable in <code>config.json</code>). All other articles
+are avalible via their permalink or the archive page.</p>
+<p>Example article/post:</p>
+<pre><code class="lang-markdown">title: My new shiny blog
+author: johndoe
+date: 2012-12-12 12:12
+
+<span class="header"># Hello!</span>
+
+I'm an article. Bla bla bla so interesting.</code></pre>
+</section>
+        </article>
+        <div id="carbonads-container">
+          <div class="carbonad">
+            <div id="azcarbon"></div>
+            <script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/31765/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+          </div>
+        </div>
+        <footer>
+          <ul>
+            <li>Created by Stephen Hutchings &copy; 2013</li>
+            <li>
+              <form id="donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">Are Typicons useful to you? You can help by 
+                <input id="donate-button" type="submit" name="submit" title="PayPal - The safer, easier way to pay online!" value="donating"><img alt="" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
+              </form>
+            </li>
+            <li><a href="https://twitter.com/Typicons" title="@typicons">@typicons</a> on Twitter</li>
+            <li class="twitter-button-container"><a href="https://twitter.com/share" data-text="@typicons are free-to-use vector icons embedded in a webfont kit for easy use in your UI" data-count="none" class="twitter-share-button">Tweet</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

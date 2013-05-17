@@ -42,3 +42,5 @@ Just add a `span` or `i` tag with the appropriate class name.
 
 That's it! Remember to include both the `typcn` and `typcn-class-name` classes.
 I prefer this over the `[class^="typcn-"], [class*=" typcn-"]` method simply because the selector performs better on low performance devices.
+
+There is one caveat, though. Typicons is very large, weighing in at about 80kb (unzipped). I therefore strongly suggest reading the 'Making Typicons' article or checking out the resources in order to make a custom build of Typicons.
