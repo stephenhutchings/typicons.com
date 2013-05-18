@@ -31,7 +31,7 @@ The CSS file uses the `@font-face` rule to point to several font files, providin
 ```
 
 Again, ensure that the path to the files matches the setup on your server.
-Typicons uses ??? bulletproof CSS for included fonts on your website.
+Typicons uses Fontspring's [bulletproof @font-face](http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax) CSS for including fonts on your website.
 
 Now your ready to include any icons you want on your site.
 Just add a `span` or `i` tag with the appropriate class name.

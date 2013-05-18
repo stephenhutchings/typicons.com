@@ -10,7 +10,7 @@ table{border-collapse:separate;border-spacing:0;}
 caption,th,td{text-align:left;font-weight:normal;}
 blockquote:before,blockquote:after,q:before,q:after{content:"";}
 blockquote,q{quotes:"" "";}
-body{font-family:"Questrial";-webkit-tap-highlight-color:transparent;font-size:16px;color:#555555;}
+body{font-family:"Questrial","Helvetica Neue",Arial,Helvetica,sans-serif;-webkit-tap-highlight-color:transparent;font-size:16px;color:#555555;}
 h1{font-size:32px;line-height:36px;}
 h1 small{font-size:18px;}
 h2{font-size:28px;line-height:36px;}
@@ -60,7 +60,7 @@ footer li{display:inline-block;line-height:24px;padding:10px 16px;height:26px;}
 footer iframe.twitter-share-button{position:relative;top:6px;}
 #donate-button{background-color:transparent;color:#00b2ff;font-family:inherit;border:none;display:inline;padding:0;-webkit-appearance:none;-webkit-transition:background-color 200ms;-moz-transition:background-color 200ms;-o-transition:background-color 200ms;-ms-transition:background-color 200ms;transition:background-color 200ms;}
 #donate-button:hover{color:#555555;text-decoration:underline;}
-@media (max-width:640px){#nav{margin-top:8px;} #nav a{padding:6px 0;width:100%;border-bottom-color:#ccc;} #preview .icon{padding:1px;font-size:22px;} .search-box #result{display:none;} .search-box #search{width:255px;border-right:none;float:none;} #header .desc{font-size:20px;}}.carbonad{width:100% !important;height:124px !important;box-sizing:border-box;background-color:#f5f5f5;}
+@media (max-width:640px){#nav{margin-top:8px;} #nav a{padding:6px 0;width:100%;border-bottom-color:#ccc;} #preview .icon{padding:1px;font-size:22px;} .search-box #result{display:none;} .search-box #search{width:255px;border-right:none;float:none;} #header .desc{font-size:20px;}}.carbonad{width:100% !important;height:124px !important;box-sizing:border-box;background-color:#f5f5f5;font:inherit !important;font-size:14px !important;}
 .carbonad-text{display:block !important;width:440px !important;float:none !important;margin-top:0px !important;padding-top:12px !important;max-width:100%;}
 .carbonad-img{margin:12px 20px 12px 12px !important;}
 .carbonad-tag{text-align:left !important;margin-top:20px !important;}
