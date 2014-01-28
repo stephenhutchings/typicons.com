@@ -1,36 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/icon">
-    <title>
-      Making Typicons - 
-      Making Typicons - 
-      Making Typicons - 
-      Making Typicons - Typicons
-    </title>
-    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="308 pixel perfect, all-purpose icons in two styles">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Questrial">
-    <link rel="stylesheet" href="/media/css/style.css">
-    <link rel="stylesheet" href="/media/css/github.css">
-    <link rel="stylesheet" href="/media/css/typicons.css">
-    <script src="/media/js/zepto.min.js"></script>
-    <script src="/media/js/script.js"></script>
-  </head>
-  <body>  
-    <header id="header"><a href="/">
-        <h1>Typicons<small class="sub">v2.0</small>
-        </h1>
-        <p class="desc">308 pixel perfect, all-purpose icons in two styles</p></a><a id="download" href="/resources/typicons.2.0.zip" class="btn"><span class="typcn typcn-download"></span>Download</a>
-    </header>
-    <div id="content">
-      <div id="content-inner">
-        <nav id="nav" class="clearfix making-typicons"><a href="/more/making-typicons/" class="making-link"><i class="typcn typcn-edit"></i>Making Typicons</a><a href="/more/how-to-use-typicons/" class="how-to-link"><i class="typcn typcn-directions"></i>How to use Typicons</a><a href="/more/resources/" class="resources-link"> <i class="typcn typcn-compass"></i>Resources</a><a href="https://github.com/stephenhutchings/typicons.font" class="github-link"> <i class="typcn typcn-social-github"></i>Typicons on GitHub</a>
-        </nav>
-        <h1>Making Typicons</h1>
-        <article class="post">
-          <section class="content"><p>Typicons is the result of many stolen hours and late nights to create a high quality icon font that would be free for everyone to use. I hope this write-up can be useful for anyone undertaking a similar challenge.</p>
+<!DOCTYPE html><html lang="en"><head><title>Making Typicons - Typicons</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="336 pixel perfect, all-purpose vector icons"><meta name="keywords" content="lightweight vector icon free opensource scalable svg ttf webfont retina high resolution custom github 24px grid glyph css3 psuedo selector ui designer user interface 48px"><meta name="author" content="Stephen Hutchings"><!--[if lt IE 9]><script src="/assets/js/html5shiv.js"></script><![endif]--><link rel="shortcut icon" href="/favicon.ico" type="image/icon"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Questrial"><link rel="stylesheet" href="/assets/css/style.css"></head><body>  <header id="header"><a href="/"><h1>Typicons<small class="sub">v2.0.3</small></h1><p class="desc">336 pixel perfect, all-purpose vector icons</p></a><a id="download" href="https://github.com/stephenhutchings/typicons.font/archive/v2.0.3.zip" class="btn"><span class="typcn typcn-download"></span>Download</a></header><div id="content"><div id="content-inner"><nav id="nav" class="clearfix making-typicons"><a href="/more/making-typicons/" class="making-link"><i class="typcn typcn-edit"></i>Making Typicons</a><a href="/more/how-to-use-typicons/" class="how-to-link"><i class="typcn typcn-directions"></i>How to use Typicons</a><a href="/more/resources/" class="resources-link"> <i class="typcn typcn-compass"></i>Resources</a><a href="https://github.com/stephenhutchings/typicons.font" class="github-link"> <i class="typcn typcn-social-github"></i>Typicons on GitHub</a></nav><h1>Making Typicons<small class="article-sub">How to make a web font from scratch</small></h1><article class="post"><section class="content"><p>Typicons is the result of many stolen hours and late nights to create a high quality icon font that would be free for everyone to use. I hope this write-up can be useful for anyone undertaking a similar challenge.</p>
 <h3>The original artwork</h3>
 <p>The original vectors were created in Adobe Illustrator. Using pixel preview and its incredibly useful pixel snapping, it was a easy to ensure that each the icons would remain sharp and sit within solid pixels wherever possible.</p>
 <p>Almost all the curves in Typicons are perfect curves, and producing beautiful tangents to these curves would have been impossible to achieve without the help of Hiroyuki Sato&#39;s awesome Illustrator scripts. This set of scripts contains many useful tidbits, including the ability to round corners to arbitrary amounts without relying on Illustrator&#39;s Round Corners... effect.</p>
@@ -39,11 +7,11 @@
 <h3>Exporting the files to SVG</h3>
 <p>In order to convert the artwork to a font, it was necessary to first export the individual artboards to a series of SVG files. The easiest way to do this was to make sure that each artboard had the correct name and use the Save As... method. After selecting SVG as the format, you can check the Use Artboards option and create the SVG files in one process.</p>
 <p>Unfortunately, Illustrator doesn&#39;t produce the most beautiful file names, but this can be remedied with the help of the command line. In my case, I wanted to remove the &#39;typicons_&#39; it appended to each SVG file. Just <code>cd</code> to the folder with the exported files and run this script to replace the unwanted content. Run without <code>| /bin/sh</code> to see the expected output if your a little uncomfortable with the command line.</p>
-<pre><code><span class="title">cd</span> path/to/typicons
+<pre><code>cd ./path/to/typicons
 
-ls typicons_<span class="regexp">*.svg</span> | awk <span class="string">'{print("mv "<span class="variable">$1</span>" "<span class="variable">$1</span>)}'</span> | sed <span class="string">'s/typicons_//2'</span> | /bin/sh</code></pre>
-<p>Of course, this eventually became a tedious process so I created a small node module to take care of this process. After doing this, I merged into the process a few more steps to take care of creating the <code>config.yml</code> file, creating the UIDs on the fly as well as the unicode code. You can see this module in the support folder on GitHub. The code is a little bit dirty but it speeds up the editing/update process. Now, processing the files was simple:</p>
-<pre><code><span class="title">node</span> process.js</code></pre>
+ls typicons_*.svg | awk &#39;{print(&quot;mv &quot;$1&quot; &quot;$1)}&#39; | sed &#39;s/typicons_//2&#39; | /bin/sh</code></pre>
+<p>Of course, this eventually became a tedious process so I created a small node module to take care of it. I also merged into the process a few more steps to take care of creating the <code>config.yml</code> file, creating the UIDs on the fly as well as the unicode codes in the Private Use Area. You can see this module in the support folder on GitHub. The code is a little bit dirty but it speeds up the editing/update process. Now, processing the files was simple:</p>
+<pre><code>node  ./support/process/process.js</code></pre>
 <p>This process combines the SVG files with a <code>meta.yml</code> file to quickly build to thif configuration file that was required.</p>
 <h3>Producing the font</h3>
 <p>The first version of Typicons was created with a third party GUI, and this process was slow and repetitive. For the second version of Typicons, I wanted to switch to a script based approach to produce the font. (IcoMoon provides a web app to create fonts if the command line isn&#39;t your thing.) After some looking around, I came across the Fontello website that was doing just this. What&#39;s more, the source code for the website was openly available on GitHub. This meant, with a little tweaking, the same code could be used to create Typicons. Fortunately, the code was well documented enough for me to get it running.</p>
@@ -57,31 +25,4 @@ ls typicons_<span class="regexp">*.svg</span> | awk <span class="string">'{print
 <p>Once this file had the appropriate information, use the command line to <code>cd</code> to the project and run <code>make</code>. If the font-builder submodule is setup correctly, this should produce the different font formats, the CSS file and a demo HTML file showing the font in the browser.</p>
 <p>Now that the font was being programatically generated, it is easy to edit the SVG files or the config.yml to edit, add and remove icons to the font.</p>
 <p>Any questions? Hit me up on <a href="https://twitter.com/Typicons">Twitter</a>.</p>
-</section>
-        </article>
-        <div id="carbonads-container">
-          <div class="carbonad">
-            <div id="azcarbon"></div>
-            <script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/31765/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
-          </div>
-        </div>
-        <footer>
-          <ul>
-            <li>Created by Stephen Hutchings &copy; 2013</li>
-            <li>
-              <form id="donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">Are Typicons useful to you? You can help by 
-                <input id="donate-button" type="submit" name="submit" title="PayPal - The safer, easier way to pay online!" value="donating"><img alt="" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
-              </form>
-            </li>
-            <li><a href="https://twitter.com/Typicons" title="@typicons">@typicons</a> on Twitter</li>
-            <li class="twitter-button-container"><a href="https://twitter.com/share" data-text="@typicons are free-to-use vector icons embedded in a webfont kit for easy use in your UI" data-count="none" class="twitter-share-button">Tweet</a>
-              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </li>
-          </ul>
-        </footer>
-      </div>
-    </div>
-  </body>
-</html>
+</section></article><div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/31765/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div></div></div><footer><ul><li>Created by Stephen Hutchings &copy; 2014</li><li><form id="donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">Are Typicons useful to you? You can help by <input id="donate-button" type="submit" name="submit" title="PayPal - The safer, easier way to pay online!" value="donating"><img alt="" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1"></form></li><li><a href="https://twitter.com/Typicons" title="@typicons">@typicons</a> on Twitter</li><li class="twitter-button-container"><a href="https://twitter.com/share" data-text="@typicons are free-to-use vector icons embedded in a webfont kit for easy use in your UI" data-count="none" class="twitter-share-button">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li></ul></footer><script src="/assets/js/zepto.min.js"></script><script src="/assets/js/script.min.js"></script></body></html>

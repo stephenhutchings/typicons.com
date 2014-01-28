@@ -2,35 +2,37 @@
 html(lang='en')
   head
     block head
-      meta(charset='utf-8')
-      meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-      link(rel='shortcut icon', href='/favicon.ico', type='image/icon')
       title
         block title
           = locals.name
-      link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
+
+      meta(charset='utf-8')
+      meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+      meta(name='description', content=locals.description)
+      meta(name='keywords', content=locals.keywords)
+      meta(name='author', content=locals.owner)
+
+      //if lt IE 9
+        script(src='/assets/js/html5shiv.js')
+
+      link(rel='shortcut icon', href='/favicon.ico', type='image/icon')
       link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Questrial')
-      link(rel='stylesheet', href='/media/css/style.css')
-      link(rel='stylesheet', href='/media/css/github.css')
-      link(rel='stylesheet', href='/media/css/typicons.css')
-      script(src='/media/js/zepto.min.js')
-      script(src='/media/js/script.js')
+      link(rel='stylesheet', href='/assets/css/style.css')
   body   
 
     header#header
       a(href='/')
         h1
           =locals.name
-          small.sub v2.0
+          small.sub v#{locals.version}
         p.desc= locals.description
 
-      a#download.btn(href='/resources/typicons.2.0.zip')
+      a#download.btn(href='https://github.com/stephenhutchings/typicons.font/archive/v#{locals.version}.zip')
         span.typcn.typcn-download
         | Download
 
       block header
 
-        
     #content
       #content-inner
         include nav
@@ -39,6 +41,9 @@ html(lang='en')
 
         include carbon
 
-        footer
-          block footer
-          include footer
+    footer
+      block footer
+      include footer
+
+    script(src='/assets/js/zepto.min.js')
+    script(src='/assets/js/script.min.js')

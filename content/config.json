@@ -1,9 +1,26 @@
 {
+  "plugins": [
+    "../node_modules/wintersmith-less"
+  ],
+
   "locals": {
     "url": "http://localhost:8080",
     "name": "Typicons",
     "owner": "Stephen Hutchings",
-    "description": "308 pixel perfect, all-purpose icons in two styles",
-    "index_articles": 3
+    "version": "2.0.3",
+    "description": "336 pixel perfect, all-purpose vector icons",
+    "keywords": "lightweight vector icon free opensource scalable svg ttf webfont retina high resolution custom github 24px grid glyph css3 psuedo selector ui designer user interface 48px",
+    "assets": {
+      "css": {
+        "all": [
+          "/assets/css/*"
+        ]
+      },
+      "js": {
+        "all": [
+          "/assets/js/*"
+        ]
+      }
+    }
   }
 }

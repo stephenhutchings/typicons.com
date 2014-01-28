@@ -1,5 +1,6 @@
 ---
 title: Making Typicons
+sub: How to make a web font from scratch
 author: x 
 date: x
 template: article.jade
@@ -22,15 +23,15 @@ In order to convert the artwork to a font, it was necessary to first export the 
 Unfortunately, Illustrator doesn't produce the most beautiful file names, but this can be remedied with the help of the command line. In my case, I wanted to remove the 'typicons_' it appended to each SVG file. Just `cd` to the folder with the exported files and run this script to replace the unwanted content. Run without `| /bin/sh` to see the expected output if your a little uncomfortable with the command line.
 
 ```
-cd path/to/typicons
+cd ./path/to/typicons
 
 ls typicons_*.svg | awk '{print("mv "$1" "$1)}' | sed 's/typicons_//2' | /bin/sh
 ```
 
-Of course, this eventually became a tedious process so I created a small node module to take care of this process. After doing this, I merged into the process a few more steps to take care of creating the `config.yml` file, creating the UIDs on the fly as well as the unicode code. You can see this module in the support folder on GitHub. The code is a little bit dirty but it speeds up the editing/update process. Now, processing the files was simple:
+Of course, this eventually became a tedious process so I created a small node module to take care of it. I also merged into the process a few more steps to take care of creating the `config.yml` file, creating the UIDs on the fly as well as the unicode codes in the Private Use Area. You can see this module in the support folder on GitHub. The code is a little bit dirty but it speeds up the editing/update process. Now, processing the files was simple:
 
 ```
-node process.js
+node  ./support/process/process.js
 ```
 
 This process combines the SVG files with a `meta.yml` file to quickly build to thif configuration file that was required.

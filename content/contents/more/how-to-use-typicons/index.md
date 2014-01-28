@@ -1,21 +1,32 @@
 ---
 title: How to Use Typicons
-author: x 
+sub: Typicons are dead simple to use.
+author: x
 date: x
 template: article.jade
 ---
 
-Typicons are dead simple to use.
+### Install with bower
 
-Included in the download, or available on GitHub, are all the bits and peices you need to get set up.
+The easiest way to install Typicons is with bower. This will give you the minified CSS, the combined font files (SVG, WOFF, TTF, EOT) and a demo page showing how to include the font.
 
-The first step is to include `typicons.css` in your the head of your HTML. Make sure you change the path to point to the file on your server.
-
-```html
-<link rel='stylesheet' href='path/to/typicons.css' />
+```
+bower install typicons
 ```
 
-The CSS file uses the `@font-face` rule to point to several font files, providing a solution for as many browsers as possible.
+### Download/Github
+
+You can also find all the bits and peices you need to get set up in the download or available on [GitHub](https://github.com/stephenhutchings/typicons.font).
+
+### Setting up
+
+The first step is to include `typicons.min.css` in your the head of your HTML. Make sure you change the path to point to the file on your server.
+
+```html
+<link rel='stylesheet' href='path/to/typicons.min.css' />
+```
+
+The CSS file uses the `@font-face` rule to point to several font files, providing a the best possible cross-bwroser solution.
 
 ```css
 @font-face {
@@ -43,4 +54,4 @@ Just add a `span` or `i` tag with the appropriate class name.
 That's it! Remember to include both the `typcn` and `typcn-class-name` classes.
 I prefer this over the `[class^="typcn-"], [class*=" typcn-"]` method simply because the selector performs better on low performance devices.
 
-There is one caveat, though. Typicons is very large, weighing in at about 80kb (unzipped). I therefore strongly suggest reading the 'Making Typicons' article or checking out the resources in order to make a custom build of Typicons.
+There is one caveat, though. Typicons is very large, weighing in at about 80kb (unzipped). I therefore strongly suggest reading the 'Making Typicons' article or checking out the [resources](/more/resources/) in order to make a custom build of Typicons.
