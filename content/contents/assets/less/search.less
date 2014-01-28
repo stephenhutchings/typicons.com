@@ -1,0 +1,39 @@
+.search-box {
+  margin-bottom: 18px;
+  padding: 6px 0;
+  border-top: 1px dotted #ccc;
+  border-bottom: 1px dotted #ccc;
+
+  #search,
+  label {
+    border: none;
+    float: left;
+    height: 24px;
+    padding: 1px 0 1px 1px;
+  }
+
+  #search {
+    font: inherit;
+    box-shadow: none;
+    margin: 0 8px 0 0;
+    width: 120px;
+    padding-left: 8px;
+    border-right: 1px dotted #ccc;
+  }
+
+  #result {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    small {
+      font-size: 0.8em;
+      margin-left: 6px;
+      color: #aaa;
+    }
+    .typcn {
+      margin-right: 6px;
+    }
+  }
+}

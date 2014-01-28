@@ -1,0 +1,91 @@
+/* General / Layout */
+
+body {
+  font-family: "Questrial", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 16px;
+  color: @gray;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 36px;
+}
+h1 small {
+  font-size: 18px;
+  display: block;
+  color: #aaa;
+}
+h2 {
+  font-size: 28px;
+  line-height: 36px;
+}
+h2 small {
+  font-size: 18px;
+}
+h3 {
+  line-height: 28px;
+  font-size: 21px;
+}
+h3 small {
+  font-size: 14px;
+}
+
+hr {
+  border: none;
+  border-top: 1px dotted hsl(0, 0%, 80%);
+}
+
+::selection,
+::-moz-selection {
+  background: @blue;
+  color: #fff;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+
+#content a {
+  color: @dark;
+  text-decoration: none;
+}
+
+#content a:hover {
+  color: @gray;
+  text-decoration: underline;
+}
+
+#content {
+  h1, h2, h3, h4, p {
+    margin-bottom: 12px;
+  }
+
+  ul h2,
+  ul h3 {
+    margin-bottom: 4px;
+  }
+
+  li {
+    margin-bottom: 12px;
+  }
+}
+
+#content {
+  width: 880px;
+  margin: auto;
+  max-width: 100%;
+  line-height: 1.5;
+}
+
+#content-inner {
+  padding: 0 1em;
+}
