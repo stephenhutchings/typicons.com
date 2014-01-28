@@ -4,10 +4,7 @@
   "description": "336 pixel perfect, all-purpose vector icons in a web-font kit",
   "main": "index.js",
   "dependencies": {
-    "mustache": "~0.7.2",
     "wintersmith": "~1.2.4",
-    "wintersmith-hogan": "~0.1.0",
-    "wintersmith-kelvin": "~0.0.6",
     "wintersmith-less": "~0.2.1"
   },
   "devDependencies": {},
