@@ -1,5 +1,0 @@
-less:
-  - watch: 'content/contents/media/less'
-    src: 'content/contents/media/less/style.less'
-    target: 'content/contents/media/css/style.css'
-    minify: true

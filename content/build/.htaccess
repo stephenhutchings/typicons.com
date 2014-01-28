@@ -1,3 +1,0 @@
-AddType application/vnd.ms-fontobject .eot
-AddType application/octet-stream .otf .ttf
-AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/vnd.ms-fontobject application/octet-stream
