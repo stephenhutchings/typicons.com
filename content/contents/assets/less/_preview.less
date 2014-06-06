@@ -10,19 +10,19 @@
   .icon {
     float: left;
     padding: 0.25em;
-    padding: 2px;
+    padding: 0 2px;
     font-size: 24px;
     border: 1px solid transparent;
     border-radius: 2px;
+    margin: 3px 5px;
+    line-height: 24px;
+    background-color: white;
 
-    background-size: 1px 1px;
-    background-image: url('grid.png');
-
-    -webkit-transition: all 300ms;
-    -moz-transition: all 300ms;
-    -o-transition: all 300ms;
-    -ms-transition: all 300ms;
-    transition: all 300ms;
+    -webkit-transition: all 300ms, z-index 0 300ms;
+    -moz-transition: all 300ms, z-index 0 300ms;
+    -o-transition: all 300ms, z-index 0 300ms;
+    -ms-transition: all 300ms, z-index 0 300ms;
+    transition: all 300ms, z-index 0 300ms;
 
     &.match {
       color: #000;
@@ -35,13 +35,29 @@
   }
 
   .enlarge {
-    -webkit-transform: scale(4);
-    -moz-transform: scale(4);
-    -o-transform: scale(4);
-    -ms-transform: scale(4);
-    transform: scale(4);
+    -webkit-transform: scale(3.5);
+    -moz-transform: scale(3.5);
+    -o-transform: scale(3.5);
+    -ms-transform: scale(3.5);
+    transform: scale(3.5);
+
+    -webkit-transition: all 300ms, z-index 0 0;
+    -moz-transition: all 300ms, z-index 0 0;
+    -o-transition: all 300ms, z-index 0 0;
+    -ms-transition: all 300ms, z-index 0 0;
+    transition: all 300ms, z-index 0 0;
+
     border-color: #ccc;
 
-    transition: all 300ms, z-index 0 300ms;
+    &.icon {
+      @media print,
+           (-webkit-min-device-pixel-ratio: 1.25),
+           (-o-min-device-pixel-ratio: 5/4),
+           (min-resolution: 120dpi) {
+
+        background-size: 1px 1px;
+        background-image: url('grid.png');
+      }
+    }
   }
 }
