@@ -16,7 +16,7 @@ bower install typicons
 
 ### Download/Github
 
-You can also find all the bits and peices you need to get set up in the download or available on [GitHub](https://github.com/stephenhutchings/typicons.font).
+You can also find all the bits and pieces you need to get set up in the download or available on [GitHub](https://github.com/stephenhutchings/typicons.font).
 
 ### Setting up
 
