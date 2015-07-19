@@ -48,7 +48,7 @@ Now your ready to include any icons you want on your site.
 Just add a `span` or `i` tag with the appropriate class name.
 
 ```html
-<span class="typcn typcn-arrow-left"><span>
+<span class="typcn typcn-arrow-left"></span>
 ```
 
 That's it! Remember to include both the `typcn` and `typcn-class-name` classes.
