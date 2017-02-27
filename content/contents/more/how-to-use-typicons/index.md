@@ -26,7 +26,7 @@ The first step is to include `typicons.min.css` in your the head of your HTML. M
 <link rel='stylesheet' href='path/to/typicons.min.css' />
 ```
 
-The CSS file uses the `@font-face` rule to point to several font files, providing a the best possible cross-bwroser solution.
+The CSS file uses the `@font-face` rule to point to several font files, providing a the best possible cross-browser solution.
 
 ```css
 @font-face {
