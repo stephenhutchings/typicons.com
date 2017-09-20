@@ -21,29 +21,30 @@ footer {
   }
 
   iframe {
-    position: relative;
-    top: 6px;
+    margin-top: 6px;
     margin-left: 4px;
+    margin-bottom: -6px;
   }
-}
 
-#donate-button {
-  background-color: transparent;
-  color: @dark;
-  font-family: inherit;
-  border: none;
-  display: inline;
-  padding: 0;
+  .footer-link {
+    background-color: transparent;
+    color: @dark;
+    font-family: inherit;
+    border: none;
+    display: inline;
+    padding: 0;
 
-  -webkit-appearance: none;
-  -webkit-transition: background-color 200ms;
-  -moz-transition: background-color 200ms;
-  -o-transition: background-color 200ms;
-  -ms-transition: background-color 200ms;
-  transition: background-color 200ms;
-}
+    -webkit-appearance: none;
+    -webkit-transition: background-color 200ms;
+    -moz-transition: background-color 200ms;
+    -o-transition: background-color 200ms;
+    -ms-transition: background-color 200ms;
+    transition: background-color 200ms;
+  }
 
-#donate-button:hover {
-  color: @gray;
-  text-decoration: underline;
+  .footer-link:hover {
+    color: @gray;
+    text-decoration: underline;
+  }
+
 }
